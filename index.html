@@ -518,7 +518,7 @@
     border-top: 2px solid var(--border);
     text-align: center;
     padding: 1.5rem;
-    color: rgba(232,210,138,0.4);
+    color: rgba(232,210,138,0.85);
     font-family: 'Cinzel', serif;
     font-size: 0.7rem;
     letter-spacing: 0.2em;
@@ -626,7 +626,7 @@
     <div class="nav-section">
       <button class="nav-class-btn" onclick="showPage('nobility', this)">
         <span class="nav-dot" style="background:var(--nobility)"></span>
-        The High Nobility
+        Peers of the Realm
       </button>
       <div class="nav-sub" id="sub-nobility">
         <a href="#" onclick="scrollToId('n-etiquette')">Etiquette &amp; Rank</a>
@@ -639,7 +639,7 @@
     <div class="nav-section">
       <button class="nav-class-btn" onclick="showPage('gentry', this)">
         <span class="nav-dot" style="background:var(--gentry)"></span>
-        The Lesser Nobility (Gentry)
+        The Landed Gentry
       </button>
       <div class="nav-sub" id="sub-gentry">
         <a href="#" onclick="scrollToId('g-portrait')">A Portrait of the Tier</a>
@@ -825,7 +825,7 @@
         <a href="#" onclick="scrollToId('wm-divorce')">Separation &amp; Divorce</a>
         <a href="#" onclick="scrollToId('wm-institution')">Institutionalisation</a>
         <a href="#" onclick="scrollToId('wm-timeline')">Timeline of Rights</a>
-        <a href="#" onclick="scrollToId('wm-angel')">The Angel in the House</a>
+        <a href="#" onclick="scrollToId('wm-angel')">The Domestic Ideal</a>
         <a href="#" onclick="scrollToId('wm-courtship')">Courtship &amp; Marriage</a>
       </div>
     </div>
@@ -856,6 +856,22 @@
         <a href="#" onclick="scrollToId('dc-precarious')">The Precariousness</a>
         <a href="#" onclick="scrollToId('dc-status')">Social Status</a>
         <a href="#" onclick="scrollToId('dc-vs-gov')">Companion vs Governess</a>
+      </div>
+    </div>
+
+    <div class="nav-section">
+      <button class="nav-class-btn" onclick="showPage('lady-waiting', this)">
+        <span class="nav-dot" style="background:#1a3a5a"></span>
+        The Lady in Waiting
+      </button>
+      <div class="nav-sub" id="sub-lady-waiting">
+        <a href="#" onclick="scrollToId('lw-who')">Who They Were</a>
+        <a href="#" onclick="scrollToId('lw-hierarchy')">Ranks &amp; Hierarchy</a>
+        <a href="#" onclick="scrollToId('lw-duties')">Daily Duties</a>
+        <a href="#" onclick="scrollToId('lw-appointment')">Appointment &amp; Politics</a>
+        <a href="#" onclick="scrollToId('lw-life')">Life at Court</a>
+        <a href="#" onclick="scrollToId('lw-bedchamber')">The Bedchamber Crisis</a>
+        <a href="#" onclick="scrollToId('lw-beyond')">Beyond the Royal Court</a>
       </div>
     </div>
 
@@ -1274,7 +1290,7 @@
         <span class="ornament">⚜</span>
         <h2>A Compendium of British Society, Manners &amp; Daily Life</h2>
         <p style="font-style:italic;color:var(--ink-light);font-size:0.95rem;margin-bottom:0.3rem">Being a thorough account of customs, ranks, and realities — from the Regency to the close of the Early Victorian age</p>
-        <p>Between 1811 and 1860, Britain was transformed beyond recognition. The Prince Regent held court at Carlton House while mill children worked sixteen-hour shifts in Manchester. Jane Austen wrote her novels; Dickens wrote his. Beethoven composed his Ninth Symphony deaf; Turner dissolved the world into light. The railway shrank the country from weeks to hours. The crinoline expanded women's skirts to six feet in diameter. Darwin, working quietly in his study, prepared to unmoor the century from its certainties.</p>
+        <p>Between 1811 and 1860, Britain was transformed beyond recognition. The Prince Regent held court at Carlton House while mill children worked sixteen-hour shifts in Manchester. Jane Austen wrote her novels; Dickens wrote his. Beethoven composed his Ninth Symphony almost completely deaf; Turner dissolved the world into light. The railway shrank the country from weeks to hours. By the 1850s, the steel-cage crinoline expanded women's skirts to six feet in diameter. Darwin, working quietly in his study, prepared to unmoor the century from its certainties.</p>
         <p>This compendium gathers, in one place, the customs, hierarchies, rituals, material realities, arts, sciences, and daily textures of that half-century — from the glittering drawing rooms of Mayfair to the rookeries of St Giles; from the court presentations of debutantes to the rookeries where the destitute slept six to a room. Navigate by social rank or by theme to explore the unwritten rules, the social rituals, and the lived experience of every stratum of British society.</p>
       </div>
 
@@ -1285,8 +1301,8 @@
             <tr><th>Rank</th><th>Designation</th><th>Share of population</th><th>Typical income (£/year)</th></tr>
           </thead>
           <tbody>
-            <tr><td>1</td><td>High Nobility — Peers, Lords, Dukes</td><td>~0.5%</td><td>10,000 – 100,000+</td></tr>
-            <tr><td>2</td><td>The Gentry — Baronets, Knights, Squires</td><td>~2%</td><td>1,000 – 10,000</td></tr>
+            <tr><td>1</td><td>High Nobility — Peers of the Realm</td><td>~0.5%</td><td>10,000 – 100,000+</td></tr>
+            <tr><td>2</td><td>The Landed Gentry — Baronets, Knights &amp; Squires</td><td>~2%</td><td>1,000 – 10,000</td></tr>
             <tr><td>3</td><td>Middle Class — Physicians, Merchants, Clerks</td><td>~15%</td><td>100 – 1,000</td></tr>
             <tr><td>4</td><td>Working Class — Artisans, Labourers, Agricultural workers</td><td>~60%</td><td>20 – 80</td></tr>
             <tr><td>5</td><td>Domestic Servants</td><td>~10%</td><td>5 – 30 (+ board &amp; lodging)</td></tr>
@@ -1298,12 +1314,12 @@
       <div class="class-cards">
         <div class="class-card nobility-bg" data-page="nobility" onclick="showPage('nobility', null)">
           <span class="cc-icon">👑</span>
-          <h3 class="nobility-color">High Nobility</h3>
-          <p>Dukes, Earls, Viscounts &amp; Lords of Parliament</p>
+          <h3 class="nobility-color">Peers of the Realm</h3>
+          <p>Dukes, Marquesses, Earls, Viscounts &amp; Barons</p>
         </div>
         <div class="class-card gentry-bg" data-page="gentry" onclick="showPage('gentry', null)">
           <span class="cc-icon">🏰</span>
-          <h3 class="gentry-color">The Gentry</h3>
+          <h3 class="gentry-color">The Landed Gentry</h3>
           <p>Baronets, Knights &amp; landed proprietors</p>
         </div>
         <div class="class-card middle-bg" data-page="middle" onclick="showPage('middle', null)">
@@ -1332,9 +1348,9 @@
     <!-- HAUTE NOBLESSE -->
     <div id="page-nobility" class="page">
       <div class="page-header">
-        <span class="page-class-badge nobility-color" style="border-color:var(--nobility)">Tier I</span>
-        <h1 class="page-title">The High Nobility</h1>
-        <p class="page-subtitle">Peers, Lords, Dukes, Counts &amp; Viscounts — The guardians of the established order</p>
+        <span class="page-class-badge nobility-color" style="border-color:var(--nobility)">The Peerage</span>
+        <h1 class="page-title">Peers of the Realm</h1>
+        <p class="page-subtitle">Peers of the Realm — Dukes, Marquesses, Earls, Viscounts &amp; Barons — The guardians of the established order</p>
       </div>
 
       <div class="section" id="n-etiquette">
@@ -1424,8 +1440,8 @@
     <!-- GENTRY -->
     <div id="page-gentry" class="page">
       <div class="page-header">
-        <span class="page-class-badge gentry-color" style="border-color:var(--gentry)">Tier II</span>
-        <h1 class="page-title">The Lesser Nobility — The Gentry</h1>
+        <span class="page-class-badge gentry-color" style="border-color:var(--gentry)">Landed Gentry</span>
+        <h1 class="page-title">The Landed Gentry</h1>
         <p class="page-subtitle">Baronets, Knights, Squires &amp; Country Gentlemen</p>
       </div>
 
@@ -1717,8 +1733,8 @@
       </div>
 
       <div class="section" id="wm-angel">
-        <h2><span class="s-icon">🌹</span> The Ideal of the Angel in the House</h2>
-        <p>The Victorian era codified the ideal of the woman as the <em>Angel in the House</em> — pure, devoted, self-sacrificing, guardian of family morality. This ideal concerned primarily the middle and upper classes; it had little practical meaning for the working-class woman who toiled in factory or field.</p>
+        <h2><span class="s-icon">🌹</span> The Domestic Ideal — Later Epitomised as "The Angel in the House"</h2>
+        <p>The domestic ideal of the pure, devoted, self-sacrificing wife and mother was a defining feature of Victorian middle-class culture throughout the period. The phrase <em>Angel in the House</em> itself comes from Coventry Patmore's poem of that name, published from 1854 — making it a mid-Victorian formulation of ideals that had been building since the 1820s and 1830s. For the Regency and earlier Victorian years, the same ideals were present and operative, but expressed in the language of "female virtue," "domestic propriety," and "the duties of a wife and mother" rather than Patmore's specific phrase. This ideal concerned primarily the middle and upper classes; it had little practical meaning for the working-class woman who toiled in factory or field.</p>
         <table>
           <thead><tr><th>Class</th><th>The Ideal Applied</th><th>The Reality</th></tr></thead>
           <tbody>
@@ -1746,8 +1762,8 @@
           <div class="rules-dont">
             <h4>✗ Prohibited or Scandalous</h4>
             <ul>
-              <li>Any unchaperoned meeting with a man — any class, any context</li>
-              <li>A private letter to a man who was not yet her fiancé</li>
+              <li>Any unchaperoned meeting with a man — for respectable middle- and upper-class women, private unchaperoned meetings risked scandal regardless of circumstances</li>
+              <li>Unsanctioned private correspondence with a man — especially before family approval had been given; such letters were compromising documents if discovered</li>
               <li>Being seen leaving a man's house or carriage unaccompanied</li>
               <li>Refusing every proposal — possible but socially damaging after 25</li>
               <li>Any public expression of physical affection before the engagement</li>
@@ -1869,7 +1885,7 @@
 
         <div id="cd-tea-ritual" style="margin-top:1.5rem">
           <h3>The Ritual — Presiding, Pouring, and Protocol</h3>
-          <p>The act of pouring tea was the exclusive province of the mistress of the house — or, in her absence, the eldest daughter. To pour tea was to preside: it placed her at the centre of the room, facing her guests, in control of the rhythm and pace of the gathering. A woman who poured well — unhurried, attentive to preferences, neither too brisk nor too slow — demonstrated the social competence that her education had trained her toward.</p>
+          <p>The act of pouring tea was normally presided over by the mistress of the house — or, in her absence, a senior female member of the household such as an elder daughter or close female relation. To pour tea was to preside: it placed her at the centre of the room, facing her guests, in control of the rhythm and pace of the gathering. A woman who poured well — unhurried, attentive to preferences, neither too brisk nor too slow — demonstrated the social competence that her education had trained her toward.</p>
           <div class="card-grid">
             <div class="card" style="border-top-color:#5a3a1a">
               <h4>The Tea Service</h4>
@@ -1987,7 +2003,7 @@
             </div>
             <div class="card" style="border-top-color:var(--teal)">
               <h4>Dancing — the Greatest Permitted Intimacy</h4>
-              <p>The ballroom was the one space where physical proximity between unmarried persons was not only permitted but structured. Dancing — particularly the waltz, which required the gentleman's hand at the lady's waist — was the closest sanctioned physical contact possible before engagement. Dancing twice with the same partner in one evening was a public declaration of particular interest; three times was close to a declaration of courtship.</p>
+              <p>The ballroom was the one space where physical proximity between unmarried persons was not only permitted but structured. Dancing — particularly the waltz, which required the gentleman's hand at the lady's waist — was the closest sanctioned physical contact possible before engagement. Dancing twice with the same partner in one evening was widely read as marked attention — a signal not lost on observers, though the precise social weight varied by company and context. Three dances with the same partner in one evening was more difficult to explain away.</p>
             </div>
           </div>
         </div>
@@ -2702,6 +2718,205 @@
     </div>
 
     <!-- COURTSHIP -->
+    <div id="page-lady-waiting" class="page">
+      <div class="page-header">
+        <span class="page-class-badge" style="background:transparent;border:1px solid #1a3a5a;color:#1a3a5a">Women in Society</span>
+        <h1 class="page-title">The Lady in Waiting</h1>
+        <p class="page-subtitle">Honour, service, and proximity to power — the women who attended the Queen and the great ladies of the realm</p>
+      </div>
+
+      <div class="section" id="lw-who">
+        <h2><span class="s-icon">👑</span> Who They Were</h2>
+        <p>A lady in waiting was a woman of rank — typically from the nobility or upper gentry — who attended a queen, princess, or great noblewoman as part of her formal household. The role was simultaneously a position of honour, a form of service, and a social appointment. To be chosen as a lady in waiting was a mark of distinction; the position placed its holder in daily proximity to the highest in the land.</p>
+        <p>Ladies in waiting were not servants in the ordinary sense — they were themselves women of birth and standing, often married to peers or prominent men. They did not wait on their mistress out of economic necessity but out of duty, loyalty, and the social prestige the position conferred. The court appointment brought access to power, political intelligence, and the most exclusive social circles in the kingdom.</p>
+        <div class="card-grid">
+          <div class="card" style="border-top:3px solid #1a3a5a">
+            <h4>Birth &amp; Rank</h4>
+            <p>A lady in waiting was invariably of good family — daughter or wife of a peer, baronet, or senior gentleman. Lower social origins were disqualifying; the role required someone whose presence did not diminish the dignity of the household she served.</p>
+          </div>
+          <div class="card" style="border-top:3px solid #1a3a5a">
+            <h4>Education &amp; Accomplishments</h4>
+            <p>Expected to be literate, discreet, conversant in French, accomplished in music and needle-work. She had to be presentable at Court — capable of moving in the highest social circles without embarrassment to her mistress.</p>
+          </div>
+          <div class="card" style="border-top:3px solid #1a3a5a">
+            <h4>Discretion Above All</h4>
+            <p>The cardinal virtue of the position. A lady in waiting was privy to private conversations, domestic arrangements, and political discussions. The ability to see everything and say nothing was the indispensable qualification.</p>
+          </div>
+          <div class="card" style="border-top:3px solid #1a3a5a">
+            <h4>Personal Connection</h4>
+            <p>Appointments often reflected family ties, political alliance, or long personal loyalty. Queen Victoria's early household was composed largely of Whig families; the question of their replacement was constitutionally explosive.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="lw-hierarchy">
+        <h2><span class="s-icon">🎖️</span> Ranks &amp; Hierarchy</h2>
+        <p>The royal household was structured with considerable formal precision. The ladies attendant on the Queen were not interchangeable — each rank carried specific duties, specific precedence, and specific access to the royal person.</p>
+        <table>
+          <thead>
+            <tr><th>Title</th><th>Rank Required</th><th>Number</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Mistress of the Robes</strong></td>
+              <td>Duchess</td>
+              <td>1</td>
+              <td>Head of the Queen's household. Attended on the most formal occasions — Drawing Rooms, State openings. A political appointment; changed with governments.</td>
+            </tr>
+            <tr>
+              <td><strong>Lady of the Bedchamber</strong></td>
+              <td>Wife of a peer (countess or above)</td>
+              <td>8</td>
+              <td>Assisted the Queen with dressing, attended her in the bedchamber, accompanied her on formal appearances. Served in monthly rotation.</td>
+            </tr>
+            <tr>
+              <td><strong>Woman of the Bedchamber</strong></td>
+              <td>Daughter or wife of a nobleman or baronet</td>
+              <td>8</td>
+              <td>More continuous attendance. Read aloud, wrote letters at dictation, accompanied the Queen on walks and informal occasions. The closest daily companion.</td>
+            </tr>
+            <tr>
+              <td><strong>Maid of Honour</strong></td>
+              <td>Unmarried daughter of the nobility or gentry</td>
+              <td>8</td>
+              <td>The most junior rank. Young, unmarried, present at Court functions. Marriage ended the appointment — marrying well was the expected outcome of the position.</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          "The Mistress of the Robes has no robes to manage. The Women of the Bedchamber are not in the bedchamber. The system is ancient and the titles have outlasted their original meaning — but the hierarchy they encode is entirely real."
+          <cite>— Attributed to a court observer, c. 1840s</cite>
+        </blockquote>
+      </div>
+
+      <div class="section" id="lw-duties">
+        <h2><span class="s-icon">📋</span> Daily Duties</h2>
+        <p>The practical reality of waiting on the Queen or a great noblewoman was a life of structured attendance — being present, being useful, being agreeable, and above all being available when required. The duties were less physically demanding than those of a servant but more socially and emotionally exacting.</p>
+        <table>
+          <thead>
+            <tr><th>Duty</th><th>Detail</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Physical attendance</strong></td><td>Accompanying the Queen on walks, drives, public appearances, and visits. Always present but never obtrusively so.</td></tr>
+            <tr><td><strong>Reading aloud</strong></td><td>Women of the Bedchamber read to the Queen — newspapers, correspondence summaries, novels, poetry. A skilled reader was particularly valued.</td></tr>
+            <tr><td><strong>Correspondence</strong></td><td>Writing letters at dictation, addressing envelopes, managing the flow of written communication on behalf of their mistress.</td></tr>
+            <tr><td><strong>Dressing &amp; personal attendance</strong></td><td>Ladies of the Bedchamber assisted with the formal toilet — handing garments, arranging jewels, witnessing the ceremonial dressing that court protocol required.</td></tr>
+            <tr><td><strong>Social management</strong></td><td>Receiving visitors, making introductions, managing the Queen's social calendar in coordination with household staff.</td></tr>
+            <tr><td><strong>Needlework &amp; occupation</strong></td><td>Long hours of waiting were filled with embroidery, music, and quiet occupation in the Queen's apartments. The ability to be agreeable company over many idle hours was essential.</td></tr>
+            <tr><td><strong>Discretion &amp; mediation</strong></td><td>Conveying messages between the Queen and ministers, family members, or household staff — and absorbing tensions without communicating them further.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section" id="lw-appointment">
+        <h2><span class="s-icon">⚖️</span> Appointment &amp; Politics</h2>
+        <p>The appointment of ladies to the royal household was never purely a personal matter — it was inescapably political. The great ladies of the household were the wives and daughters of the leading political families of the kingdom. Their presence in the royal bedchamber was a visible signal of royal favour — or, conversely, of political alignment.</p>
+        <div class="card-grid">
+          <div class="card" style="border-top:3px solid #c0392b">
+            <h4>The Political Dimension</h4>
+            <p>The Mistress of the Robes and the Ladies of the Bedchamber were formally political appointments — they changed, in principle, when governments changed. Their husbands sat in Parliament; their families lobbied for office. A lady in waiting was never merely decorative.</p>
+          </div>
+          <div class="card" style="border-top:3px solid #c0392b">
+            <h4>Patronage &amp; Access</h4>
+            <p>Proximity to the monarch was a form of power. A lady in waiting could speak a word in the Queen's ear; she could smooth a petition or obstruct an appointment. The position was sought by families as much for its influence as for its prestige.</p>
+          </div>
+          <div class="card" style="border-top:3px solid #c0392b">
+            <h4>The Whig &amp; Tory Divide</h4>
+            <p>Queen Victoria's early household was overwhelmingly Whig — the legacy of Melbourne's government. When Peel attempted to form a Tory ministry in 1839, his request that the Queen replace some of her Whig ladies with Tory ones precipitated a constitutional crisis. Victoria refused; Peel declined to form the government.</p>
+          </div>
+          <div class="card" style="border-top:3px solid #c0392b">
+            <h4>Royal Favourites</h4>
+            <p>Within the formal structure, personal attachment created informal hierarchies. The Queen's genuine favourites — those whose company she sought beyond formal duty — wielded influence that no official ranking could precisely define. Lady Flora Hastings and the Baroness Lehzen are two very different examples of what proximity to the Queen could mean.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="lw-life">
+        <h2><span class="s-icon">🏰</span> Life at Court</h2>
+        <p>Court life under the Regency and early Victorian periods was a world of rigid routine, elaborate ceremony, and suffocating proximity. Ladies in waiting served in rotation — typically one month on, two months off — but when in attendance, their time was not their own.</p>
+        <div class="rules-grid">
+          <div class="rules-do">
+            <h4>✦ The Privileges</h4>
+            <ul>
+              <li>Apartments within the royal palace during waiting periods</li>
+              <li>Meals at Court — often elaborate and excellent</li>
+              <li>Attendance at the most exclusive events in the kingdom</li>
+              <li>Access to the sovereign unavailable to anyone else</li>
+              <li>Social prestige that attached to the position for life</li>
+              <li>A stipend — modest, but the position was not unpaid</li>
+            </ul>
+          </div>
+          <div class="rules-dont">
+            <h4>✗ The Constraints</h4>
+            <ul>
+              <li>Near-total loss of personal freedom during waiting periods</li>
+              <li>Inability to leave Court without permission</li>
+              <li>Required cheerful demeanour regardless of personal circumstances</li>
+              <li>Exposure to political intrigue and factional hostility</li>
+              <li>Long hours of passive attendance with no defined task</li>
+              <li>Permanent subordination — however high one's own rank</li>
+            </ul>
+          </div>
+        </div>
+        <blockquote>
+          "I was two and fifty years in the service of five queens. I have seen much, and forgotten more than I remember. The art of the position is to be present without being noticed, and useful without being indispensable."
+          <cite>— Composite voice of the period's court memoirs</cite>
+        </blockquote>
+      </div>
+
+      <div class="section" id="lw-bedchamber">
+        <h2><span class="s-icon">🔥</span> The Bedchamber Crisis (1839) <span style="font-size:0.7rem;font-family:'Cinzel',serif;color:var(--gold);letter-spacing:0.08em;font-style:normal">◈ KEY EVENT</span></h2>
+        <p>The most dramatic episode in the history of the ladies in waiting during our period occurred in May 1839, when a constitutional dispute over the composition of Queen Victoria's household briefly prevented the formation of a government.</p>
+        <div class="card-grid">
+          <div class="card nobility-bg">
+            <h4>The Situation</h4>
+            <p>The Whig government of Lord Melbourne had fallen. Victoria, aged nineteen and personally attached to Melbourne, reluctantly sent for the Tory leader Sir Robert Peel to form a ministry. Peel, aware that the Queen's household was staffed almost entirely by Whig families, asked that some Ladies of the Bedchamber be replaced by women whose husbands supported his government.</p>
+          </div>
+          <div class="card nobility-bg">
+            <h4>Victoria's Refusal</h4>
+            <p>Victoria refused — absolutely, and in writing. She framed her refusal as a defence of personal prerogative: the ladies of her bedchamber were private appointments, not political offices, and she would not be dictated to on a matter so close to her person. Her letters to Melbourne in the background make clear she was also acting on his quiet advice.</p>
+          </div>
+          <div class="card nobility-bg">
+            <h4>Peel Withdraws</h4>
+            <p>Peel declined to form the government without the concession. Melbourne and the Whigs returned to office — effectively kept in power by a dispute over which noblewomen stood in the Queen's bedchamber. The episode was widely reported and widely debated: was it a principled stand by a young queen or a partisan manoeuvre?</p>
+          </div>
+          <div class="card nobility-bg">
+            <h4>The Precedent</h4>
+            <p>The crisis made visible what had always been true: the ladies of the household were political assets, not personal attendants in any simple sense. When Peel finally took office in 1841, Victoria agreed to the replacement of the Mistress of the Robes and some Ladies — but retained the Women of the Bedchamber, a compromise that satisfied honour on both sides.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="lw-beyond">
+        <h2><span class="s-icon">🌿</span> Beyond the Royal Court</h2>
+        <p>The term "lady in waiting" referred strictly to royal service, but the practice of aristocratic women attending great noblewomen was widespread. Duchesses, countesses, and wealthy peeresses maintained their own households with attendant women — less formally structured than the royal household, but serving analogous functions.</p>
+        <table>
+          <thead>
+            <tr><th>Household</th><th>Attendant Women</th><th>Distinction from Royal Service</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Royal Household</strong></td>
+              <td>Ladies &amp; Women of the Bedchamber, Maids of Honour</td>
+              <td>Formally structured, politically sensitive, rotational attendance, stipend paid</td>
+            </tr>
+            <tr>
+              <td><strong>Great Noblewomen</strong></td>
+              <td>Companion-attendants, unmarried female relatives</td>
+              <td>Less formal, often unpaid, based on family connection or personal attachment</td>
+            </tr>
+            <tr>
+              <td><strong>Dowager Peeresses</strong></td>
+              <td>Paid companions or female relatives in residence</td>
+              <td>Closer to the Lady's Companion role — economically driven, less prestigious</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="margin-top:1rem">The distinction between a "lady in waiting" in the strict sense (royal service) and a "companion" or "attendant" in the households of great noblewomen was clear to contemporaries, though the boundaries blur in popular usage. What united them was the fundamental dynamic: a woman of rank placing her time, her presence, and her discretion at the disposal of a woman of higher rank — in exchange for proximity, prestige, and protection.</p>
+      </div>
+    </div>
+
+
     <div id="page-courtship" class="page">
       <div class="page-header">
         <span class="page-class-badge" style="color:#8b3a5a;border-color:#8b3a5a">Cross-Cutting Theme</span>
@@ -2845,9 +3060,9 @@
           </table>
         </div>
 
-        <blockquote style="margin-top:1rem">
+        <blockquote>
           "It is not thought necessary at balls to procure an introduction before asking a lady to dance; though it is considered much more gentlemanlike to do so, especially for a waltz, where the close proximity of the partners renders a prior acquaintance peculiarly desirable."
-          <footer>— <em>Etiquette for Ladies</em>, c. 1837</footer>
+          <cite>— <em>Etiquette for Ladies</em>, c. 1837</cite>
         </blockquote>
       </div>
 
@@ -3150,9 +3365,9 @@
           </div>
         </div>
 
-        <blockquote style="margin-top:1rem">
+        <blockquote>
           "Nothing is so delicate as the reputation of a woman; it is, at once, the most beautiful and most brittle of all human things."
-          <footer>— attributed variously; a sentiment pervasive in conduct literature of the period</footer>
+          <cite>— attributed variously; a sentiment pervasive in conduct literature of the period</cite>
         </blockquote>
       </div>
 
@@ -3539,7 +3754,7 @@
               <td><strong>Ellen Turner</strong> &amp; Edward Gibbon Wakefield</td>
               <td>March 1826</td>
               <td>Wakefield abducted the 15-year-old heiress by fraud, took her to Gretna, and married her without her free consent; her father's furious pursuit reached them in France</td>
-              <td>The scandal led directly to the <em>Abduction Act 1827</em>; Wakefield imprisoned; marriage annulled by Act of Parliament; the most notorious Gretna case of the period</td>
+              <td>A scandal that strongly contributed to the <em>Abduction Act 1827</em>; Wakefield imprisoned; marriage annulled by Act of Parliament; the most notorious Gretna case of the period</td>
             </tr>
             <tr>
               <td>Roughly <strong>3,000–5,000 couples per year</strong> at peak</td>
@@ -3576,7 +3791,7 @@
 
         <div class="card" style="margin-top:1rem;background:rgba(107,26,26,0.06)">
           <h4>The Wakefield Abduction Case — The Scandal That Changed the Law</h4>
-          <p>The 1826 case of Edward Gibbon Wakefield and Ellen Turner was the most notorious Gretna case of the period and had direct legislative consequences. Wakefield, 30, had contacted the 15-year-old heiress Ellen Turner at her school under a false pretext — claiming her father was ill and needed her. He then drove her north to Gretna, where she married him under the impression that this was somehow necessary for her father's financial situation. Her father and uncle pursued them to France and recovered her. Wakefield was tried, convicted under the existing Abduction Act, imprisoned for three years, and the marriage was annulled by a private Act of Parliament. The outcry led directly to the <strong>Abduction Act 1827</strong>, which strengthened penalties for the abduction of heiresses specifically for the purpose of marriage.</p>
+          <p>The 1826 case of Edward Gibbon Wakefield and Ellen Turner was the most notorious Gretna case of the period and had direct legislative consequences. Wakefield, 30, had contacted the 15-year-old heiress Ellen Turner at her school under a false pretext — claiming her father was ill and needed her. He then drove her north to Gretna, where she married him under the impression that this was somehow necessary for her father's financial situation. Her father and uncle pursued them to France and recovered her. Wakefield was tried, convicted under the existing Abduction Act, imprisoned for three years, and the marriage was annulled by a private Act of Parliament. The outcry strongly contributed to the <strong>Abduction Act 1827</strong>, which strengthened penalties for the abduction of heiresses specifically for the purpose of marriage.</p>
         </div>
       </div>
 
@@ -3705,9 +3920,9 @@
           </div>
         </div>
 
-        <blockquote style="margin-top:1rem">
+        <blockquote>
           "In the Border counties, it was not uncommon for a young pair to handfast, that is, to become bound to each other by a mutual pledge, which was considered as a species of marriage, but which could be dissolved at the end of a year and a day if the parties chose to separate."
-          <footer>— Walter Scott, notes to <em>The Monastery</em>, 1820</footer>
+          <cite>— Walter Scott, notes to <em>The Monastery</em>, 1820</cite>
         </blockquote>
       </div>
 
@@ -3949,7 +4164,7 @@
           <thead><tr><th>Class</th><th>Typical age at first marriage</th><th>Observed range</th><th>Primary rationale</th></tr></thead>
           <tbody>
             <tr><td>High Nobility</td><td>17 – 21</td><td>16 – 24</td><td>Dynastic alliance, maximum dowry in youth</td></tr>
-            <tr><td>Lesser Nobility (Gentry)</td><td>19 – 23</td><td>17 – 26</td><td>Territorial alliance, consolidation of property</td></tr>
+            <tr><td>Landed Gentry</td><td>19 – 23</td><td>17 – 26</td><td>Territorial alliance, consolidation of property</td></tr>
             <tr><td>Upper Middle Class</td><td>21 – 25</td><td>19 – 28</td><td>Waiting for the suitor to establish himself</td></tr>
             <tr><td>Lower Middle Class</td><td>22 – 26</td><td>20 – 30</td><td>Savings needed to establish a household</td></tr>
             <tr><td>Skilled Working Class</td><td>22 – 27</td><td>20 – 32</td><td>Marriage as soon as combined wages allow</td></tr>
@@ -3986,8 +4201,8 @@
         <p>An unmarried woman at 25-26 began to be considered an <em>old maid</em> in upper circles. At 30, she was officially assigned to this category — a term implying social failure, a lack of attractiveness, or an insufficient dowry.</p>
         <p>The reality was more nuanced. Some women refused insufficient proposals and waited for better — socially acceptable if the family could support them. Others, past 30, found a relative freedom in their single state: fewer restrictions on travel, management of a small personal fortune, involvement in charitable works.</p>
         <blockquote>
-          « Une femme de vingt-sept ans ne peut jamais espérer se sentir — ou être sentie — aussi belle qu'à dix-sept ans. »
-          <cite>— Jane Austen, <em>Persuasion</em>, 1817 (voix d'un personnage, non de l'autrice)</cite>
+          "A woman of seven-and-twenty can never hope to feel — or be felt to be — as blooming as she was at seventeen."
+          <cite>— Jane Austen, <em>Persuasion</em>, 1817 (a character's voice, not the author's)</cite>
         </blockquote>
         <p>Jane Austen herself refused a proposal at 26 and never married — living by her pen and the generosity of her brothers.</p>
       </div>
@@ -4180,9 +4395,9 @@
 
       <div class="section" id="mh-mistress">
         <h2><span class="s-icon">🎭</span> The Mistress — Tolerated, Never Official</h2>
-        <p>A gentleman or lord's mistress was a tacitly accepted reality, provided certain unwritten rules were observed. She was never introduced in family circles. Elle vit dans un appartement discret, slightly apart from the fashionable neighbourhoods. Elle reçoit une rente, parfois des cadeaux coûteux. If she was of modest rank (actress, ballet dancer, widow without fortune), the relationship was accepted without question. If she was of superior rank, the situation became delicate.</p>
+        <p>A gentleman or lord's mistress was a tacitly accepted reality, provided certain unwritten rules were observed. She was never introduced in family circles. She lives in a discreet apartment, slightly apart from the fashionable neighbourhoods. She receives an allowance, sometimes costly gifts. If she was of modest rank (actress, ballet dancer, widow without fortune), the relationship was accepted without question. If she was of superior rank, the situation became delicate.</p>
         <blockquote>
-          « Un homme peut tout se permettre pourvu qu'il ne le fasse pas dans la rue et n'effraie pas les chevaux. »
+          "A man may do as he pleases, provided he does not do it in the street and frighten the horses."
           <cite>— Adage attributed to Mrs. Patrick Campbell, Victorian actress</cite>
         </blockquote>
         <div class="rules-grid">
@@ -4678,7 +4893,7 @@
         <table>
           <thead><tr><th>Title</th><th>Training</th><th>Clientele</th><th>Social Status</th></tr></thead>
           <tbody>
-            <tr><td><strong>Physician</strong></td><td>Oxford or Cambridge — university degree, Latin required</td><td>Nobility &amp; upper middle class</td><td>A gentleman — never performed surgery with his own hands</td></tr>
+            <tr><td><strong>Physician</strong></td><td>University degree, Latin required (typically Oxford or Cambridge, though Edinburgh grew in prominence)</td><td>Nobility &amp; upper middle class</td><td>A gentleman — never performed surgery with his own hands</td></tr>
             <tr><td><strong>Surgeon</strong></td><td>Apprenticeship + Royal College of Surgeons</td><td>All classes for operations</td><td>Rising in status across the 19th century — formerly associated with barbers</td></tr>
             <tr><td><strong>Apothecary</strong></td><td>5-year apprenticeship + Society of Apothecaries</td><td>Middle &amp; working classes — de facto general practitioner</td><td>Middle class — honourable trade but inferior to the physician</td></tr>
           </tbody>
@@ -7303,8 +7518,11 @@
       </div>
 
       <div id="pa-prab" style="margin-top:2rem">
-        <h2><span class="s-icon">🌹</span> The Pre-Raphaelite Brotherhood — The Revolt (1848)</h2>
+        <h2><span class="s-icon">🌹</span> The Pre-Raphaelite Brotherhood — The Revolt (1848) <span style="font-size:0.7rem;font-family:'Cinzel',serif;color:var(--gold);letter-spacing:0.08em;font-style:normal">◈ LATE ENTRY — 1848 onward</span></h2>
         <div style="background:rgba(106,58,26,0.07);border-left:3px solid #6a3a1a;padding:1rem 1.2rem;margin:0.8rem 0;border-radius:0 4px 4px 0">
+          <p><p style="background:rgba(184,134,11,0.08);border-left:3px solid var(--gold);padding:0.6rem 1rem;font-size:0.9rem;margin-bottom:1rem;font-style:italic">
+            <strong style="font-style:normal">Chronological note:</strong> The Pre-Raphaelite Brotherhood was founded in 1848 — placing it at the very end of this encyclopaedia's range. Their founding revolt and early works fall within our period; their mature influence and later development extend well beyond 1860. This section covers the Brotherhood's origins and early phase only.
+          </p>
           <p>In 1848 — the year of European revolutions — seven young artists formed a secret society in London and signed their works with the initials <strong>PRB</strong>. They were rebelling against everything the Royal Academy represented: the dark, bituminous studio colours inherited from the Old Masters; the idealised forms of Raphael and his successors; the preference for classical mythology over modern subjects. Their manifesto: paint with vivid, true-to-life colour directly from nature; paint modern subjects with moral seriousness; or paint medieval and early Renaissance subjects with the intensity of belief, not the smoothness of academic formula.</p>
         </div>
         <div class="cards-grid" style="margin-top:0.8rem">
@@ -7502,7 +7720,7 @@
       </div>
 
       <div id="sc-crystal" style="margin-top:2rem">
-        <h2><span class="s-icon">🔮</span> The Crystal Palace (1851) — Architecture as Revolution</h2>
+        <h2><span class="s-icon">🔮</span> The Crystal Palace (1851) — Architecture as Revolution <span style="font-size:0.7rem;font-family:'Cinzel',serif;color:var(--gold);letter-spacing:0.08em;font-style:normal">◈ END-OF-PERIOD LANDMARK — 1851</span></h2>
         <div class="cards-grid">
           <div class="card">
             <h4>A Building That Changed Everything</h4>
@@ -7750,7 +7968,7 @@
       <div class="page-header">
         <span class="page-class-badge" style="color:#6a1a3a;border-color:#6a1a3a">Arts &amp; Culture</span>
         <h1 class="page-title">Theatre, Opera &amp; Stage — 1811 to 1860</h1>
-        <p class="page-subtitle">Edmund Kean's lightning, Jenny Lind's voice, the patent theatres, the music halls — performance in the age of Romanticism</p>
+        <p class="page-subtitle">Edmund Kean's lightning, Jenny Lind's voice (1840s–50s), the patent theatres, pleasure gardens &amp; the emerging music hall — performance across the age of Romanticism</p>
       </div>
       
 
@@ -7893,11 +8111,14 @@
       </div>
 
       <div id="st-jenny" style="margin-top:2rem">
-        <h2><span class="s-icon">🐦</span> Jenny Lind (1820–1887) — "The Swedish Nightingale"</h2>
+        <h2><span class="s-icon">🐦</span> Jenny Lind (1820–1887) — "The Swedish Nightingale" <span style="font-size:0.7rem;font-family:'Cinzel',serif;color:var(--gold);letter-spacing:0.08em;font-style:normal">◈ 1840s–1850s</span></h2>
         <div class="cards-grid">
           <div class="card">
             <h4>The Voice and Its Effect</h4>
-            <p><strong>Jenny Lind</strong> was a Swedish soprano whose voice combined an extraordinary upper range (she could sustain notes above high C with perfect purity), a seamless middle register, and a quality of emotional directness that contemporaries consistently described as something beyond technical accomplishment — a quality of soul made audible. She had been transformed from an awkward provincial girl into a polished artist by Manuel García in Paris. Her London debut at Her Majesty's Theatre in May 1847 — as Alice in Meyerbeer's <em>Robert le Diable</em> — produced scenes of sustained public excitement that the press could only compare to religious revival.</p>
+            <p style="background:rgba(184,134,11,0.08);border-left:3px solid var(--gold);padding:0.6rem 1rem;font-size:0.9rem;margin-bottom:1rem;font-style:italic">
+            <strong style="font-style:normal">Period note:</strong> Jenny Lind belongs specifically to the mid-Victorian period — her London debut was in 1847, her peak fame in the late 1840s and 1850s. She is not representative of the Regency or early Victorian stage; she is included here as the defining vocal star of the period's later decades.
+          </p>
+          <p><strong>Jenny Lind</strong> was a Swedish soprano whose voice combined an extraordinary upper range (she could sustain notes above high C with perfect purity), a seamless middle register, and a quality of emotional directness that contemporaries consistently described as something beyond technical accomplishment — a quality of soul made audible. She had been transformed from an awkward provincial girl into a polished artist by Manuel García in Paris. Her London debut at Her Majesty's Theatre in May 1847 — as Alice in Meyerbeer's <em>Robert le Diable</em> — produced scenes of sustained public excitement that the press could only compare to religious revival.</p>
           </div>
           <div class="card">
             <h4>Queen Victoria — A Royal Devotion</h4>
@@ -7933,10 +8154,13 @@
       </div>
 
       <div id="st-musichall" style="margin-top:2rem">
-        <h2><span class="s-icon">🎪</span> Music Hall — The New Entertainment (from c.1850)</h2>
+        <h2><span class="s-icon">🎪</span> Music Hall — The New Entertainment (from c.1850) <span style="font-size:0.7rem;font-family:'Cinzel',serif;color:var(--gold);letter-spacing:0.08em;font-style:normal">◈ LATE PERIOD — precursors from 1810s</span></h2>
         <div class="cards-grid">
           <div class="card">
-            <h4>From Pleasure Garden to Music Hall</h4>
+            <h4><p style="background:rgba(184,134,11,0.08);border-left:3px solid var(--gold);padding:0.6rem 1rem;font-size:0.9rem;margin-bottom:1rem;font-style:italic">
+            <strong style="font-style:normal">Chronological note:</strong> The music hall as a distinct institution belongs primarily to the 1850s onward. For the Regency and early Victorian years (1811–1845), the relevant forms were the <strong>pleasure gardens</strong> (Vauxhall, Cremorne), <strong>song and supper rooms</strong>, <strong>saloon entertainments</strong> attached to pubs, and <strong>minor theatres</strong> operating outside the patent system. The fully developed music hall — purpose-built, with a chairman, ticketed — emerges from c.1850 with the Canterbury Hall (1852).
+          </p>
+          <p>From Pleasure Garden to Music Hall</h4>
             <p>The music hall as a distinct institution emerged in the late 1840s and 1850s from two earlier traditions: the <strong>pleasure garden</strong> (Vauxhall, Cremorne — outdoor venues offering promenade concerts, fireworks, and refreshment to a mixed social audience) and the <strong>supper room or "free and easy"</strong> (informal entertainment in pub back rooms where customers ate, drank, and watched performers). When Charles Morton opened the <strong>Canterbury Hall</strong> in Lambeth in 1852 — a purpose-built hall attached to a pub, with a chairman presiding over the entertainment, tickets sold with refreshment — he created the template of the Victorian music hall.</p>
           </div>
           <div class="card">
@@ -8473,7 +8697,7 @@
         <div style="margin-bottom:1.5rem;display:flex;gap:0.8rem;flex-wrap:wrap;align-items:center">
           <input id="glossaire-search" type="text" placeholder="Search a term……" oninput="filterGlossaire()" style="padding:0.5rem 1rem;border:1px solid var(--border);background:rgba(255,255,255,0.6);font-family:'EB Garamond',serif;font-size:1rem;color:var(--ink);flex:1;min-width:200px;outline:none;">
           <div style="display:flex;gap:0.4rem;flex-wrap:wrap" id="cat-filters">
-            <button class="cat-btn active" onclick="filterCat('all',this)" style="padding:0.3rem 0.8rem;border:1px solid var(--border);background:var(--ink);color:var(--gold-pale);font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.1em;cursor:pointer">ALL</button>
+            <button class="cat-btn active" onclick="filterCat('all',this)" style="padding:0.3rem 0.8rem;border:1px solid var(--border);background:var(--gold);color:#1a1008;font-weight:bold;font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.1em;cursor:pointer">ALL</button>
             <button class="cat-btn" onclick="filterCat('social',this)" style="padding:0.3rem 0.8rem;border:1px solid rgba(74,26,110,0.4);background:transparent;color:var(--nobility);font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.1em;cursor:pointer">SOCIAL</button>
             <button class="cat-btn" onclick="filterCat('juridique',this)" style="padding:0.3rem 0.8rem;border:1px solid rgba(122,26,26,0.4);background:transparent;color:var(--crimson);font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.1em;cursor:pointer">LEGAL</button>
             <button class="cat-btn" onclick="filterCat('mariage',this)" style="padding:0.3rem 0.8rem;border:1px solid rgba(122,26,74,0.4);background:transparent;color:#7a1a4a;font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.1em;cursor:pointer">MARRIAGE</button>
@@ -8492,9 +8716,9 @@
 
   </main>
 
-<footer>
+<cite>
   ✦ Wiki — Société Britannique Régence & Victorienne ✦ &nbsp;|&nbsp; 1811–1860 &nbsp;|&nbsp; Usage éducatif & créatif ✦
-</footer>
+</cite>
 
 <script>
   function scrollToId(id) {
@@ -8547,22 +8771,22 @@
       ex: "\"She plays most agreeably, draws with taste, and speaks French without accent — a very accomplished girl indeed.\"" },
     { terme: "At home", orig: "Being 'at home'", cat: "social", flag: "",
       def: "Formula indicating that a lady is receiving visitors. She may be physically present but 'not at home' — meaning she refuses to receive certain visitors. Servants conveyed this decision without explanation.",
-      ex: "« Mme Elliot n'est pas à la maison ce matin. » — bien qu'on l'entende jouer du piano à l'étage." },
+      ex: "\"Mrs Elliot is not at home this morning.\" — though one can distinctly hear her playing the piano upstairs." },
     { terme: "Ball / Assembly", orig: "Ball / Assembly", cat: "social", flag: "",
       def: "Two distinct types. The private ball (<em>private ball</em>) was held at a private house, by selective invitation. The public assembly (<em>public assembly</em>) like Almack's was open by voucher. The ball was the central social space for chaperoned meetings between young people.",
       ex: "" },
     { terme: "Blue-stocking", orig: "Bluestocking (derog.)", cat: "social", flag: "⚠",
       def: "Initially a neutral term (18th-century female literary group) that became progressively pejorative: a woman too learned, too intellectual, insufficiently feminine. Used to mock women who read too much, debate, or hold strong opinions.",
-      ex: "« On dit qu'elle lit le grec — un bas-bleu invétéré, je le crains. »" },
+      ex: "\"They say she reads Greek — a confirmed blue-stocking, I fear.\"" },
     { terme: "Calling card / Visiting card", orig: "Visiting card", cat: "social", flag: "",
       def: "Small card bearing the person's name and sometimes address. Left upon a visit. The way of folding it (upper right corner, lower left, etc.) constituted a coded language. Leaving one's card without entering was a mark of courtesy or a way to avoid a private meeting.",
       ex: "" },
     { terme: "Coming out", orig: "Début in society", cat: "social", flag: "★",
       def: "Official presentation of a young woman to society, generally during her first London Season, often marked by a presentation at Court. Signifies she is now 'on the marriage market'. Had no sexual connotation at the time — the modern meaning must be avoided.",
-      ex: "« C'est sa première Saison — elle vient de faire son entrée dans le monde. »" },
+      ex: "\"It is her first Season — she has only just come out.\"" },
     { terme: "Cut (to cut someone)", orig: "To snub / cut dead", cat: "social", flag: "",
       def: "Ostensibly refusing to acknowledge an acquaintance in public — walking past someone without greeting them, looking without seeing. A devastating social gesture signifying a complete breach of relations. Several degrees of 'the cut' existed, from the most subtle to the most brutal.",
-      ex: "« Il l'a coupée en plein Rotten Row devant cinquante personnes — la ruine complète. »" },
+      ex: "\"He cut her in the middle of Rotten Row before fifty people — quite her ruin.\"" },
     { terme: "Débutante", orig: "Débutante", cat: "social", flag: "",
       def: "Young woman of good family making her first social Season. She wore white or pale shades, was presented at Court (for the upper ranks), and was theoretically in search of a suitable husband. Her behaviour was closely watched.",
       ex: "" },
@@ -8586,7 +8810,7 @@
       ex: "" },
     { terme: "Morning / Morning calls", orig: "Morning / Morning calls (afternoon visits)", cat: "social", flag: "★",
       def: "Linguistic paradox: 'morning calls' were actually made in the afternoon, between about 2 and 5pm. 'Morning' denoted the period before dinner (served around 7-8pm), not the literal morning.",
-      ex: "« Je ferai ma visite du matin chez les Bennet demain après déjeuner. »" },
+      ex: "\"I shall pay my morning call on the Bennets tomorrow after luncheon.\"" },
     { terme: "Rout", orig: "Grand rout / Crush", cat: "social", flag: "",
       def: "A large, overcrowded society reception, often verging on chaos. Unlike the ball (music and dancing), the rout was a standing reception at which one was seen, introduced, and circulated. The number of guests was a sign of prestige — even if everyone was crushed.",
       ex: "" },
@@ -8777,7 +9001,7 @@
       ex: "" },
     { terme: "Dowdy", orig: "Dowdy / Frumpish", cat: "slang", flag: "⚠",
       def: "Woman dressed without taste or elegance, in a dull and outdated manner. Implies a lack of aesthetic awareness or means. A formidable social insult for a woman who aspired to fashion.",
-      ex: "« Pauvre créature — si dowdy dans cette robe d'il y a trois saisons. »" },
+      ex: "\"Poor creature — so dowdy in that gown from three seasons past.\"" },
     { terme: "Encroaching", orig: "Social climber / Presumptuous", cat: "slang", flag: "",
       def: "Behaviour consisting of claiming more than one's rank entitled one to — inviting oneself into superior circles, treating equals as inferiors. A serious social sin in a ranked society.",
       ex: "" },
@@ -8825,7 +9049,7 @@
       ex: "" },
     { terme: "In the suds", orig: "In a fix / In hot water", cat: "slang", flag: "",
       def: "To be in a difficult, unpleasant, or compromising situation. From the washing process (in suds) — getting out was as long and difficult.",
-      ex: "« Depuis qu'il a perdu son poste, il est bien in the suds. »" },
+      ex: "\"Ever since he lost his position, he has been quite in the suds.\"" },
     { terme: "Jilt", orig: "To jilt / to throw over", cat: "slang", flag: "",
       def: "Cruelly abandoning a suitor or fiancé after having encouraged them. A <em>jilt</em> was a woman who did this habitually for pleasure or advantage. Could also apply to a man breaking off an engagement.",
       ex: "" },
@@ -8849,7 +9073,7 @@
       ex: "" },
     { terme: "Milk and water", orig: "Insipid / Wishy-washy", cat: "slang", flag: "",
       def: "Someone or something without character, insipid, bland — like milk too diluted. Applied to weak personalities, unconvincing opinions, or dull novels.",
-      ex: "« C'est une milk-and-water miss — pas un avis propre en elle. »" },
+      ex: "\"She is a perfect milk-and-water miss — not an opinion of her own in her head.\"" },
     { terme: "Missish", orig: "Prudish / Affected", cat: "slang", flag: "⚠",
       def: "Affecting excessive delicacy, false sensitivity, exaggerated modesty. Often used to criticise young women who pretended to be shocked by ordinary things. Derived from <em>miss</em> (unmarried young woman).",
       ex: "\"Do not be so missish — it is a perfectly respectable novel.\"" },
@@ -8873,7 +9097,7 @@
       ex: "\"At thirty, without dowry or suitor — they say she is definitely on the shelf.\"" },
     { terme: "Out and outer", orig: "Nonpareil / Peerless", cat: "slang", flag: "",
       def: "Someone or something absolutely exceptional in its category — for good or ill. An <em>out-and-outer</em> surpassed all others in what they did.",
-      ex: "« Comme escrimeur, c'est un out-and-outer — personne ne lui tient tête. »" },
+      ex: "\"As a swordsman he is an out-and-outer — no one can touch him.\"" },
     { terme: "Pea-goose", orig: "Goose / Simpleton", cat: "slang", flag: "",
       def: "Affectionate or slightly condescending term for a naive and somewhat silly woman. Less harsh than <em>flat</em>, more tender — implies a touching innocence rather than a punishable stupidity.",
       ex: "" },
@@ -8897,7 +9121,7 @@
       ex: "" },
     { terme: "Roué", orig: "Roué / Dissolute man", cat: "slang", flag: "",
       def: "French term fully adopted into English. Denotes a man whose life of debauchery is total and unashamed — more extreme than the mere <em>rake</em>. Origin: those who deserved to be broken on the wheel. Applied in English without the penal connotation.",
-      ex: "« Le duc est un roué notoire — sa conduite ferait rougir même les Parisiens. »" },
+      ex: "\"The Duke is a notorious roué — his conduct would bring a blush to even a Parisian.\"" },
     { terme: "Run off one's legs", orig: "Run ragged / Exhausted", cat: "slang", flag: "",
       def: "Completely exhausted by too much activity — running in all directions without rest. A frequent expression for overworked servants or gentlemen after a long Season.",
       ex: "" },
@@ -8972,7 +9196,7 @@
 
     // MÉDICAL
     { terme: "Apothecary", orig: "Apothecary", cat: "medical", flag: "",
-      def: "Medical practitioner below the <em>physician</em> but accessible to the middle class. After the <em>Apothecaries Act</em> of 1815, the de facto first general practitioner (<em>GP</em>). Prepared and sold remedies from his shop.",
+      def: "Medical practitioner below the <em>physician</em> but accessible to the middle class. After the <em>Apothecaries Act</em> of 1815, increasingly functioned as the ordinary medical attendant of the middle classes — a major precursor of the later general practitioner. Prepared and dispensed remedies from his shop.",
       ex: "" },
     { terme: "Bleeding / Bloodletting", orig: "Bloodletting / Phlebotomy", cat: "medical", flag: "",
       def: "Traitement consistant à retirer du sang au patient par incision ou sangsues. Remède presque universel pour fièvres, inflammations et apoplexies selon la théorie des humeurs. Declining but practised until the 1850s.",
@@ -8984,7 +9208,7 @@
       def: "Period term for what we now call oedema — accumulation of fluid in the tissues. Symptom of several diseases including heart failure. Treated with foxglove (William Withering, 1785).",
       ex: "" },
     { terme: "Fever / Low fever", orig: "Fever / Low fever", cat: "medical", flag: "",
-      def: "Catch-all diagnosis of the era. 'Low fever' often denoted what we would now call typhoid or tuberculosis. Fever was treated by bloodletting, purgatives, and diaphoretics (substances inducing perspiration).",
+      def: "Catch-all diagnosis of the era. 'Low fever' could refer to a range of lingering febrile illnesses — sometimes typhoid-like, sometimes not clearly diagnosable in modern terms. Fever was treated by bloodletting, purgatives, and diaphoretics (substances inducing perspiration).",
       ex: "" },
     { terme: "Laudanum", orig: "Laudanum", cat: "medical", flag: "",
       def: "Teinture d'opium dans de l'alcool. Sold freely until 1868. Remède quasi universel : douleurs, insomnies, toux, 'nerfs', coliques des nourrissons. Très addictif — la dépendance est ignorée ou niée. Prix très bas, accessible à toutes les classes.",
@@ -8993,14 +9217,14 @@
       def: "Terme médical de l'époque désignant un vaste spectre : anxiété, dépression, épuisement, hystérie, or even simplement une femme 'difficile'. Traité au repos, aux eaux thermales et au laudanum. Souvent un euphémisme pour des souffrances psychologiques réelles.",
       ex: "\"Her nerves have been in a deplorable state since her husband's death.\"" },
     { terme: "Physician", orig: "Physician (strict period sense)", cat: "medical", flag: "★",
-      def: "At the time, un <em>physician</em> est un médecin universitaire (Oxford or Cambridge) qui donne des consultations orales et prescrit — mais ne touche pas le patient de ses mains (la chirurgie est infra-dignem). Terme plus restreint qu'aujourd'hui. Clientèle de la noblesse et haute bourgeoisie uniquement.",
+      def: "The university-educated consulting doctor of highest social status. Distinct from the operating <em>surgeon</em> and the dispensing <em>apothecary</em> — the physician diagnosed, advised, and prescribed, but did not perform surgery. The term carried greater social prestige and narrower practical scope than today's usage. Clientèle of the nobility and upper-middle class.ment.",
       ex: "" },
     { terme: "Putrid fever", orig: "Putrid fever", cat: "medical", flag: "",
-      def: "Period term probably equivalent to scarlet fever or typhoid depending on context. Highly contagious, often fatal. The house of a patient with 'putrid fever' was avoided.",
+      def: "A period term for severe infectious fever, variably applied and not reliably reducible to one modern diagnosis. Highly contagious, often fatal. The house of a patient with 'putrid fever' was avoided.",
       ex: "" },
     { terme: "Vapours / The vapours", orig: "The vapours", cat: "medical", flag: "",
-      def: "Classic female affliction of the era: dizziness, sudden weakness, melancholy, fainting. Attributed to 'vapours' rising from the uterus to the brain — an absurd but seriously held medical theory. Could also serve as a social pretext for avoiding uncomfortable situations.",
-      ex: "« Elle a eu ses vapeurs au bal et a dû rentrer. »" },
+      def: "Classic female affliction of the era: dizziness, sudden weakness, melancholy, fainting. A loose blend of old medical vocabulary, feminine stereotype, and social euphemism. The classical theory of 'vapours' rising from the womb had largely dissolved into vague usage by the 19th century; the term functioned more as a social label for nervous or emotional distress than as a precise diagnosis. Could conveniently serve as a pretext for avoiding uncomfortable situations.",
+      ex: "\"She had a fit of the vapours at the ball and was obliged to go home early.\"" },
 
     // MODE
     { terme: "Breeches / Pantaloons", orig: "Breeches / Pantaloons", cat: "mode", flag: "",
@@ -9087,8 +9311,11 @@
     document.querySelectorAll('.cat-btn').forEach(b => {
       b.style.background = 'transparent';
       b.style.color = b.getAttribute('onclick').includes("'all'") ? 'var(--gold-pale)' : b.style.color;
+      b.style.fontWeight = 'normal';
     });
-    btn.style.background = 'var(--ink)';
+    btn.style.background = 'var(--gold)';
+    btn.style.color = '#1a1008';
+    btn.style.fontWeight = 'bold';
     renderGlossaire();
   }
 
